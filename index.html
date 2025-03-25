@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Website</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- fontawesom -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- famncybox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- sohaib Coding Link -->
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            Error Explorer
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body nav-menu">
+          <ul class="navbar-nav  mx-auto flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">About</a>
+            </li>
+            <li class="nav-item me-0">
+              <a class="nav-link px-3" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="nav-icon d-flex align-items-center">
+            <div class="cart me-4">
+              <i class="fa-solid fa-cart-plus"></i>
+            </div>
+            <div class="cart me-3">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="dark-text tag">Welcome to our <span>Error Explorer </span> restaurant</h1>
+          <p class="dark-text">
+            We are a restaurant that serves the best food in town. Our menu is diverse and our staff is friendly. Come
+            and try us out!
+          </p>
+          <button class="btn shop-btn mt-3">Shop Now!</button>
+        </div>
+        <div class="col-md-6 hero-con">
+          <div class="hero-img">
+            <img src="images/main-b.jpg" alt="">
+          </div>
+
+          <h4>Sushi</h4>
+          <p class="img-desc">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium cupiditate voluptodit id!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Start Product Section -->
+  <section class="product-section" id="product">
+    <div class="container d-flex flex-column">
+      <h2 class="text-center product-title">Our Products</h2>
+      <p class="text-center product-subtitle">Browse our wide selection of fresh food and find exactly <br> what
+        you're looking for</p>
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 product-card-con">
+          <div class="card product-card text-center">
+            <img src="images/Product/1.png" class="card-img-top " alt="dish1">
+            <div class="card-body">
+              <span>5<i class="fa-regular fa-star ms-1"></i></span>
+              <h3 class="card-title">Chicken Veggies</h3>
+              <p class="card-text">Fresh Chicken
+                Veggies is a delicious dish made with fresh chicken and veggies. It's a great option for those looking for
+                a healthy meal
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <section>
+    <!-- Floating Cart Icon -->
+    <div id="cart-icon" class="cart-icon">
+      <i class='bx bx-cart-alt'></i>
+      <span id="cart-count" class="cart-count">0</span>
+  </div>
+
+  <!-- Cart Dropdown -->
+  <div id="cart-dropdown" class="cart-dropdown">
+      <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button id="close-cart" class="close-cart"><i class='bx bx-x'></i></button>
+      </div>
+      <ul id="cart-items" class="cart-items"></ul>
+      <div class="cart-footer">
+          <div class="cart-total">
+              <span>Total:</span>
+              <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-btn" class="checkout-btn">Checkout</button>
+      </div>
+  </div>
+
+  <!-- Menu Section -->
+  <section class="menu section bd-container" id="menu">
+      <span class="section-subtitle">Special</span>
+      <h2 class="section-title">Menu of the week</h2>
+
+      <div class="menu__container bd-grid">
+          <div class="menu__content">
+              <img src="images/menu/plate1.png" alt="Barbecue salad" class="menu__img">
+              <h3 class="menu__name">Barbecue salad</h3>
+              <span class="menu__detail">Delicious dish</span>
+              <span class="menu__preci">$50.00</span>
+              <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i class='bx bx-cart-alt'></i></a>
+          </div>
+
+          <div class="menu__content">
+              <img src="images/menu/plate2.png" alt="Salad with fish" class="menu__img">
+              <h3 class="menu__name">Salad with fish</h3>
+              <span class="menu__detail">Delicious dish</span>
+              <span class="menu__preci">$46.00</span>
+              <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i class='bx bx-cart-alt'></i></a>
+          </div>
+
+          <div class="menu__content">
+              <img src="images/menu/plate3.png" alt="Spinach salad" class="menu__img">
+              <h3 class="menu__name">Spinach salad</h3>
+              <span class="menu__detail">Delicious dish</span>
+              <span class="menu__preci">$57.70</span>
+              <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i class='bx bx-cart-alt'></i></a>
+          </div>
+      </div>
+  </section>
+
+  <!-- End Product Section -->
+
+  <!-- Start About Section -->
+   <section class="about-section p-5" id="about">
+    <div class="container d-flex flex-column">
+      <span class="text-center about-title px-3 py-2 mb-3">ABOUT US</span>
+        
+      <h1>Discover Our Restuarent</h1>
+        <div class="row mt-5 d-flex align-items-center">
+          <div class="col-md-6 about-con story-con p-3">
+            <h2 class="text-center ">Our Story</h2>
+            <p class="">We are a restaurant that serves the best food in town. Our menu is diverse and our staff is friendly.Welcome to Delicious Bites, where every meal is crafted with love and passion. Our chefs use the freshest ingredients to bring you a dining experience that feels like home. Come and try us out! <br> <br>
+              Our team of passionate chefs draws inspiration from global cuisines while honoring traditional techniques, resulting in a menu that is both familiar and exciting.
+            </p>
+            <button class="btn about-btn mt-2 mb-4">Read More</button>
+          </div>
+          <div class="col-md-6 about-con">
+            <img src="images/gallery/gallery2.jpg" alt="about">
+          </div>
+         
+        </div>
+   </section>
+  <!-- End About Section -->
+
+<!-- Start gallery -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="images/pizza.jpg" alt="Pizza" />
+        <h3>Margherita Pizza</h3>
+        <p>Delicious and cheesy pizza</p>
+      </div>
+      <div class="menu-card">
+        <img src="images/burger.jpg" alt="Burger" />
+        <h3>Classic Burger</h3>
+        <p>Juicy and flavorful</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Latest from Our Blog</h2>
+    <div class="blog-posts">
+      <article>
+        <img src="images/blog1.jpg" alt="Food Blog" />
+        <h3>The Secret Behind Our Special Sauce</h3>
+        <p>
+          Discover the magic ingredients that make our signature dishes stand
+          out.
+        </p>
+        <a href="#">Read More</a>
+      </article>
+      <article>
+        <img src="images/blog2.jpg" alt="Chef Blog" />
+        <h3>Meet Our Head Chef</h3>
+        <p>Get to know the master chef behind your favorite meals.</p>
+        <a href="#">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+
+  <section id="gallery" class="container text-center my-5">
+    <h2 class="mb-4">Our Food Gallery</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="images/gallery1.jpg" class="img-fluid rounded shadow-lg" alt="Food 1" />
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery2.jpg" class="img-fluid rounded shadow-lg" alt="Food 2" />
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery3.jpg" class="img-fluid rounded shadow-lg" alt="Food 3" />
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery4.jpg" class="img-fluid rounded shadow-lg" alt="Food 4" />
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery5.jpg" class="img-fluid rounded shadow-lg" alt="Food 5" />
+      </div>
+      <div class="col-md-4">
+        <img src="images/gallery6.jpg" class="img-fluid rounded shadow-lg" alt="Food 6" />
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Customer Reviews</h2>
+    <div class="testimonial-slider">
+      <p>“Best food ever! 10/10” - John</p>
+      <p>“Amazing taste, will visit again.” - Sarah</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
