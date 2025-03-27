@@ -1,3 +1,54 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Navbar background change on scroll
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Function to update active section
+    const updateActiveSection = () => {
+        const scrollPosition = window.scrollY;
+        
+        document.querySelectorAll('section').forEach(section => {
+            const sectionTop = section.offsetTop - 200;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                const correspondingLink = document.querySelector(`a[href="#${section.id}"]`);
+                
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (correspondingLink) {
+                    correspondingLink.classList.add('active');
+                }
+            }
+        });
+    };
+
+    // Update active section on scroll
+    window.addEventListener('scroll', updateActiveSection);
+    
+    // Update active section on page load
+    updateActiveSection();
+
+    // Smooth scrolling with active state update
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+            
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    });
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const ctaButton = document.querySelector(".cta");
     ctaButton.addEventListener("click", () => {
@@ -28,3 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
