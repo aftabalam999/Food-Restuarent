@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Website</title>
 
-  <!-- sohaib Coding Link -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Icon -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+  <!-- Custom Css -->
   <link rel="stylesheet" href="css/index.css" />
+
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -20,11 +21,19 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- famncybox -->
+  <!-- fancybox -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
     integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Animation -->
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- 
+    - jQuery
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
 </head>
@@ -52,7 +61,7 @@
               <a class="nav-link active px-3" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link px-3" href="#product">Product</a>
+              <a class="nav-link px-3" href="#popular">Popular</a>
             </li>
             <li class="nav-item">
               <a class="nav-link px-3" href="#menu">Menu</a>
@@ -82,11 +91,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section section-padding" id="home">
+  <section class="pt-5" id="home">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <h1 class="dark-text tag">Welcome to our <span>Error Explorer </span> restaurant</h1>
+          <span class="dark-text tag">Welcome to our
+            <br><span id="typing-animation"></span><br>restaurant</span>
+          
           <p class="dark-text">
             We are a restaurant that serves the best food in town. Our menu is diverse and our staff is friendly. Come
             and try us out!
@@ -95,108 +106,361 @@
         </div>
         <div class="col-md-6 hero-con">
           <div class="hero-img">
-            <img src="images/main-b.jpg" alt="">
+            <img src="images/main-hero.jpeg" alt="main-background">
           </div>
 
           <h4>Sushi</h4>
-          <p class="img-desc">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium cupiditate voluptodit id!
+          <p class="text-secondary">
+            Shusi is a Japanese dish that is made from vinegared rice and various toppings. It is a popular dish in
+            Japan and has become popular worldwide.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Start Product Section -->
+  <!-- Start Popular Section -->
 
-  <!-- Testing menu  -->
-  <section id="product" class="section-padding">
-    <h2 class="text-center mb-5">Featured Products</h2>
+  <section id="popular" class="section-padding">
+    <div class="container  d-flex justify-content-center ">
+    <span class="text-center f-product about-title text-center px-4 py-3">Our Popular Products</span>
+  </div>
     <div class="container">
 
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="images/menu/pasta-artistian.avif"
-              class="card-img-top" alt="Product 1">
+        <div class="col-md-4 wow animate__animated animate__slideInLeft">
+          <div class="card text-center d-flex justify-content-center align-items-center">
+            <img src="images/popular/rosted-chicken.png" class="card-img-top" alt="Product 1">
             <div class="card-body">
-              <h5 class="card-title">Artisan Pasta</h5>
-              <p class="card-text">Hand-crafted pasta made with premium ingredients.</p>
+              <h5 class="card-title">Rosted Chicken</h5>
+              <h6>By <span>Jhon Cena</span></h6>
+              <p class="card-text mb-5">
+                Rosted chicken is a dish that is made from chicken that is roasted in the oven. It's very delicious and healthy. It is 
+                a popular dish in many restaurants. It is the 
+                best dish in our restaurant. It is the best dish in our restaurant.
+              
+              </p>
+              <div class="row rating1">
+              <span class="col-md-10">
+                <i class="fa-solid fa-star ms-1"></i> 
+                <i class="fa-solid fa-star ms-1"></i> 
+                <i class="fa-solid fa-star ms-1"></i> 
+                <i class="fa-solid fa-star ms-1"></i> 
+                <i class="fa-solid fa-star ms-1"></i> 
+                (5.5k)
+              </span>
+              <span class="col-md-2">
+                <i class="fa-regular fa-heart ms-1 heart"></i>
+
+              </span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="images/menu/salad.avif"
-              class="card-img-top" alt="Product 2">
+        <div class="col-md-4 wow animate__animated animate__slideInUp">
+          <div class="card product-card text-center d-flex justify-content-center align-items-center">
+            <img src="images/popular/breakfast-main.png" class="card-img-top" alt="Product 2">
             <div class="card-body">
-              <h5 class="card-title">Gourmet Salads</h5>
-              <p class="card-text">Fresh, seasonal ingredients with house-made dressings.</p>
+              <h5 class="card-title">Chicken Veggies</h5>
+              <h6>By <span>Roman Reign</span></h6>
+              <p class="card-text">
+                Chicken Veggies is a dish that is made from chicken and various vegetables.
+              </p>
+              <div class="row rating2">
+                <span class="col-md-10">
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-regular fa-star ms-1"></i> 
+                  (2.1k)
+                </span>
+                <span class="col-md-2">
+                  <i class="fa-regular fa-heart ms-1 heart"></i>
+  
+                </span>
+                </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card product-card">
-            <img src="images/menu/cake.avif"
-              class="card-img-top" alt="Product 3">
+        <div class="col-md-4 wow animate__animated animate__slideInRight">
+          <div class="card product-card text-center d-flex justify-content-center align-items-center">
+            <img src="images/popular/milk-shake.jpg" class="card-img-top" alt="Product 3">
             <div class="card-body">
-              <h5 class="card-title">Signature Desserts</h5>
-              <p class="card-text">Decadent creations from our master pastry chef.</p>
+              <h5 class="card-title">Milkshake Dessert</h5>
+              <h6>By <span>Kim Jhon</span></h6>
+              <p class="card-text">
+                Milkshake Dessert is a sweet and creamy dessert made from milk, ice cream, and various flavors.
+              </p>
+              <div class="row rating1">
+                <span class="col-md-10">
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star ms-1"></i> 
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  (4.2k)
+                </span>
+                <span class="col-md-2">
+                  <i class="fa-regular fa-heart ms-1 heart"></i>
+  
+                </span>
+                </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+ <!-- End Popular Section -->
 
 
+  <!-- Start Menu Section -->
+  <section class=" menu section-padding section bd-container" id="menu">
 
-  <!-- Menu Section -->
-  <section class=" menu section-padding section bd-container"  id="menu" >
-    <span class="section-subtitle">Special</span>
-    <h2 class="section-title">Menu of the week</h2>
-
-    <div class="menu__container bd-grid">
-      <div class="menu__content">
-        <img src="images/menu/plate1.png" alt="Barbecue salad" class="menu__img">
-        <h3 class="menu__name">Barbecue salad</h3>
-        <span class="menu__detail">Delicious dish</span>
-        <span class="menu__preci">$50.00</span>
-        <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i
-            class='bx bx-cart-alt'></i></a>
+    <!-- Vegetarian -->
+    <div class="container d-flex justify-content-center">
+      <span class="text-center about-title px-4 py-3 mb-5">Vegetarian</span>
+    </div>
+    <div class=" container mb-5">
+      <div class="row">
+      <div class=" col-md-4 wow animate__animated animate__slideInLeft">
+        <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/veg/plate1.png" alt="Barbecue salad" class="menu__img mb-3">
+        <h5 class="text-center mb-3">Barbecue salad</h5>
+        <span class="text-center text-secondary mb-5 ">
+          salad, Barbecue, Fast food <br>
+          <span class="text-dark">East India, South and north India</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$50.00</span>
+        <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
       </div>
 
-      <div class="menu__content">
-        <img src="images/menu/plate2.png" alt="Salad with fish" class="menu__img">
-        <h3 class="menu__name">Salad with fish</h3>
-        <span class="menu__detail">Delicious dish</span>
-        <span class="menu__preci">$46.00</span>
-        <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i
-            class='bx bx-cart-alt'></i></a>
+      <div class="col-md-4 wow animate__animated animate__slideInUp">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/veg/veg1.png" alt="Indian Thali" class="menu__img">
+        <h5 class="text-center mb-3">Indian Thali</h5>
+        <span class="text-center text-secondary mb-5">
+          rice, chapati, dal (lentils), curries, chutneys, salad, Paneer, Gravies, Daal, Chapati, Pratha, Chatni <br>
+          <span class="text-dark">Tamil Nadu, Bihar, Assam, UP</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$46.00</span>
+        <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+
+    <div class="col-md-4 wow animate__animated animate__slideInRight">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/veg/veg2.png" alt="Spinach salad" class="menu__img">
+        <h5 class="text-center mb-3">Mixed Vegetable Salad</h5>
+        <span class="text-center text-secondary mb-5 "> 
+          tomato, Salad, veg food, guard, onion, lemon, mint, cucumber <br>
+          <span class="text-dark">Korea, India, Nepal, Japan, China </span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$57.70</span>
+        <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+    </div>
+    </div>
+  
+<!-- Non-Vegetarian -->
+<div class="container d-flex justify-content-center">
+  <span class="text-center about-title px-4 py-3 mb-5">Non-Vegetarian</span>
+</div>
+    <div class=" container">
+      <div class="row">
+      <div class=" col-md-4 wow animate__animated animate__slideInLeft">
+        <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/non-veg/tandoori-chicken.png" alt="Tandoori Chicken" class="menu__img mb-3">
+        <h5 class="text-center mb-3">Tandoori Chicken</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Tandoori, Chicken, Tandoori-Chicken, Best <br>
+          <span class="text-dark">Saudi Arabia, China, Nepal, India</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$50.00</span>
+        <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
       </div>
 
-      <div class="menu__content">
-        <img src="images/menu/plate3.png" alt="Spinach salad" class="menu__img">
-        <h3 class="menu__name">Spinach salad</h3>
-        <span class="menu__detail">Delicious dish</span>
-        <span class="menu__preci">$57.70</span>
-        <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i
-            class='bx bx-cart-alt'></i></a>
+      <div class="col-md-4 wow animate__animated animate__slideInUp">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/non-veg/fried-chicken.png" alt="Fried Chicken" class="menu__img">
+        <h5 class="text-center mb-3">Fried Chicken</h5>
+        <span class="text-center text-secondary mb-5">
+          Fried, Fried Chicken, Chicken, <br> Non-veg, best fried Chicken<br>
+          <span class="text-dark">India, Japan, China</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$46.00</span>
+        <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i class="fa-solid fa-cart-plus"></i></a>
       </div>
+    </div>
+
+    <div class="col-md-4 wow animate__animated animate__slideInRight">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/non-veg/biryani.png" alt="Biryani" class="menu__img">
+        <h5 class="text-center mb-3">Biryani</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Chicken Biryani, Biryani, Non-veg <br>
+          <span class="text-dark">North India, South</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$57.70</span>
+        <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="container d-flex justify-content-center">
+      <span class="text-center about-title px-4 py-3 my-5">Drinks</span>
+    </div>
+    <div class=" container">
+      <div class="row">
+      <div class=" col-md-4 mb-4 wow animate__animated animate__slideInLeft">
+        <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/drinks/milkshake.png" alt="Milkshake" class="menu__img mb-3">
+        <h5 class="text-center ">Milkshake</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Milkshake, Shake, Strawberry, <br>
+          <span class="text-dark">USA, UK, Australia, India</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$50.00</span>
+        <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+      </div>
+
+      <div class="col-md-4 wow animate__animated animate__slideInUp">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/drinks/pngwing.com.png" alt="Cocktail" class="menu__img">
+        <h5 class="text-center mb-3">Cocktail</h5>
+        <span class="text-center text-secondary mb-5">
+          Cocktail, Strawberrry Cocktail <br>
+          <span class="text-dark">USA, Australia, Thailand, India</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$46.00</span>
+        <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+
+    <div class="col-md-4 wow animate__animated animate__slideInRight">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/drinks/aromatic-latte-art-coffee-white-cup.png" alt="Coffee" class="menu__img">
+        <h5 class="text-center mb-3">Coffee</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Coffee, Latte, Cappuccino, <br>
+          <span class="text-dark">Sri Lanka, India, Russia</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$57.70</span>
+        <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="container d-flex justify-content-center">
+      <span class="text-center about-title px-4 py-3 my-5">Desserts</span>
+    </div>
+    <div class=" container">
+      <div class="row">
+      <div class=" col-md-4 wow animate__animated animate__slideInLeft">
+        <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/dessert/desserts1.png" alt="Strawberry Cake" class="menu__img mb-3">
+        <h5 class="text-center mb-3">Strawberry Cake</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Strawberry Cake, Strawberry, Cake <br>
+          <span class="text-dark">Nepal, Saudi Arabia, Qatar, India</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$50.00</span>
+        <a href="#" class="button menu__button" data-name="Barbecue salad" data-price="50.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+      </div>
+
+      <div class="col-md-4 wow animate__animated animate__slideInUp">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/dessert/desserts2.png" alt="Chocolate lava Cake" class="menu__img">
+        <h5 class="text-center mb-3">Chocolate lava Cake</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Chocolate lava Cake, Chocolate, lava, Cake, Chocolate Cake <br>
+          <span class="text-dark">Turkey, India, Russia</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$48.00</span>
+        <a href="#" class="button menu__button" data-name="Salad with fish" data-price="46.00"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+
+    <div class="col-md-4 wow animate__animated animate__slideInRight">
+      <div class="menu__content px-3 pb-5 mb-5">
+        <img src="images/dessert/desserts3.png" alt="Cake with Barries" class="menu__img">
+        <h5 class="text-center mb-3">Cake with Barries</h5>
+        <span class="text-center text-secondary mb-5 ">
+          Cake with Barries, Cake, Barries <br>
+          <span class="text-dark">Thailand, India, Russia, USA</span>
+        </span>
+        <span class="menu__preci ps-4 pb-3">$57.70</span>
+        <a href="#" class="button menu__button" data-name="Spinach salad" data-price="57.70"><i class="fa-solid fa-cart-plus"></i></a>
+      </div>
+    </div>
+    </div>
     </div>
   </section>
 
 
-  <!-- End Product Section -->
+  <!-- End Menu Section -->
+
+   <!-- Start gallery -->
+   <section class="section-padding " id="gallery">
+    <div class="container d-flex justify-content-center">
+      <span class="text-center about-title px-4 py-3 ">Gallery</span>
+    </div>
+    <div class="container gallery-container mt-0">
+      <div class="carousel-container">
+          <div class="slides-wrapper">
+              <div class="slide" data-position="-1">
+                  <div class="slide-content">
+                      <img src="images/gallery/gallery1.jpg" alt="gallery1">
+                  </div>
+              </div>
+              <div class="slide active" data-position="0">
+                  <div class="slide-content">
+                      <img src="images/gallery/gallery2.jpeg" alt="gallery2">
+                  </div>
+              </div>
+              <div class="slide" data-position="1">
+                  <div class="slide-content">
+                      <img src="images/gallery/gallery3.jpg" alt="gallery3">
+                  </div>
+              </div>
+              <div class="slide hidden" data-position="2">
+                  <div class="slide-content">
+                      <img src="images/gallery/gallery4.jpg" alt="gallery4">
+                  </div>
+              </div>
+              <div class="slide hidden" data-position="-2">
+                  <div class="slide-content">
+                      <img src="images/gallery/gallery5.jpeg" alt="gallery5">
+                  </div>
+              </div>
+          </div>
+          <div class="control">
+              <button id="prevBtn"><i class="fa-solid fa-square-caret-left"></i></button>
+              <button id="nextBtn"><i class="fa-solid fa-square-caret-right"></i></button>
+          </div>
+      </div>
+  </div>
+</section>
+  <!-- End gallery -->
 
   <!-- Start About Section -->
-  <section class="about-sectio section-padding" id="about">
-    <div class="container d-flex flex-column">
-      <span class="text-center about-title px-3 py-2 mb-3">ABOUT US</span>
-
-      <h1>Discover Our Restuarent</h1>
+  <section class="about-section section-padding" id="about">
+    <div class="container d-flex justify-content-center">
+      <span class="text-center about-title px-4 py-3 mb-5">About</span>
+    </div>
+      <h1 class="text-center">Discover Our Restuarent</h1>
       <div class="row mt-5 d-flex align-items-center">
-        <div class="col-md-6 about-con story-con p-3">
+        <div class="col-md-6 wow animate__animated animate__slideInLeft about-con story-con p-3">
           <h2 class="text-center ">Our Story</h2>
           <p class="">We are a restaurant that serves the best food in town. Our menu is diverse and our staff is
             friendly.Welcome to Delicious Bites, where every meal is crafted with love and passion. Our chefs use the
@@ -206,22 +470,82 @@
           </p>
           <button class="btn about-btn mt-2 mb-4">Read More</button>
         </div>
-        <div class="col-md-6 about-con">
-          <img src="images/gallery/gallery2.jpg" alt="about">
+        <div class="col-md-6 wow animate__animated animate__slideInUp about-con">
+          <img src="images/about.avif" alt="about">
         </div>
 
       </div>
   </section>
   <!-- End About Section -->
 
-  <!-- Start gallery -->
-  
-  <footer class="text-center">
-    <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
-  </footer>
+<!-- Contact Section -->
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container d-flex justify-content-center">
+        <span class="text-center about-title px-4 py-3 mb-5">Contact Us</span>
+      </div>
+      <div class="container">
+          <div class="row d-flex justify-content-center">
+              <div class="col-lg-8 wow animate__animated animate__slideInUp">
+                  <form class="contact-form">
+                      <div class="mb-3">
+                          <input type="text" class="form-control" placeholder="Your Name" required>
+                      </div>
+                      <div class="mb-3">
+                          <input type="email" class="form-control" placeholder="Your Email" required>
+                      </div>
+                      <div class="mb-3">
+                          <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                      </div>
+                      <button type="submit" class="btn text-white">Send Message</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=" text-white mt-5">
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-md-4 wow animate__animated animate__slideInLeft">
+                <h5>About Us</h5>
+                <p>We are a family-owned restaurant serving delicious meals made from fresh ingredients. Join us for a delightful dining experience!</p>
+            </div>
+            <div class="col-md-4 wow animate__animated animate__slideInUp">
+                <h5>Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Food St, Flavor Town, India</li>
+                    <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@errorexplorer.com</li>
+                </ul>
+            </div>
+            <div class="col-md-4 wow animate__animated animate__slideInRight">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled d-flex f-icons">
+                    <li class="me-3 social-icons"><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="me-3 social-icons"><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                    <li class="me-3 social-icons"><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <div class="text-center py-3">
+      <p>&copy; 2023 Restaurant Name. All rights reserved.</p>
+  </div>
+</footer>
+
 
   <script src="js/script.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Wow js -->
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
 </body>
 
 </html>
