@@ -6,7 +6,7 @@ browse through a list of dishes, view their details, and add them to a cart.
 ### Features
 *   Browse through a list of dishes
 *   View dish details
-*   Add dishes to a cart
+*   Add dishes to a cart //For now it will not fixed we will add it later
 ### Code
 By using HTML : for structuring the website;
 By using CSS : for styling the website;
