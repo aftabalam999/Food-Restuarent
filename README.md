@@ -1,28 +1,84 @@
-# Food Website
-================
-### Overview
-This is a simple food website built using HTML, CSS, and JavaScript. The website allows users to
-browse through a list of dishes, view their details, and add them to a cart.
-### Features
-*   Browse through a list of dishes
-*   View dish details
-*   Add dishes to a cart   //For now it will not fixed we will add it later
-### Code
-By using HTML : for structuring the website;
-By using CSS : for styling the website;
-By using Bootstrap : for responsive;
-By using JavaScript : for adding interactivity to the website.
-### Usage
-1.  Open the `index.html` file in a web browser to view the website.
-2.  Click on a dish to view its details.
-3.  Click the "Add to Cart" button to add the dish to your cart.  //in progress
-### Code Structure
-markdown
-index.html
--   HTML structure for the website
--   CSS styles for the website
--   Botstrap for responsive design
--   JavaScript code for interactivity
+# 🍽️ Restaurant Website - Delicious Bites
 
+A modern, animated, and fully responsive restaurant website built with **HTML**, **CSS**, **JavaScript**, **Bootstrap**, and animation libraries. This project simulates a full-featured food business landing page, ideal for showcasing menus, galleries, and contact forms.
 
-# Final Check Done.
+## 🌐 Live Preview
+
+👉 [Click here to visit](https://jasiiin999.github.io/restaurant-website/)
+
+---
+
+## 📌 Features
+
+- ✅ Fully responsive for all screen sizes
+- ✅ Typing animation in the hero section
+- ✅ Popular dishes with ratings
+- ✅ Detailed categorized menu (Veg, Non-Veg, Drinks, Desserts)
+- ✅ Interactive image gallery carousel
+- ✅ Scroll-spy navigation highlighting current section
+- ✅ Animated sections with scroll effects (WOW.js)
+- ✅ Working contact form with user feedback
+- ✅ Stylish footer with social media links
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript (ES6)
+- Font Awesome & Boxicons
+- Animate.css & WOW.js
+- jQuery & Fancybox
+
+---
+
+## 📁 Folder Structure
+
+```
+.
+├── index.html             # Main structure
+├── index.css              # Custom styles
+├── script.js              # All JS logic and animation
+├── images/                # Assets (menu items, logo, gallery)
+├── css/                   # Stylesheet folder
+├── js/                    # JS plugins (e.g., wow.min.js)
+```
+
+---
+
+## 🖼️ Screenshot
+
+<img width="937" alt="Screenshot (14)" src="https://github.com/user-attachments/assets/0f162c92-2db8-4811-9c94-e14674a24c81" />
+
+## 🖥️ How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jasiiin999/restaurant-website.git
+   cd restaurant-website
+   ```
+
+2. Open `index.html` in your browser.
+
+---
+
+## 🖌️ Customization
+
+- Replace the logo in `images/logo.png`
+- Modify dish images and details in the `images/` folder
+- Update the contact info and email in the footer section
+- Add or remove menu sections from the HTML
+
+---
+
+## 📬 Contact
+
+**Email:** course.aftabalam@gmail.com  
+
+---
+
+## 📜 License
+
+This project is free to use and modify.
