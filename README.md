@@ -1,5 +1,12 @@
 # 🍽️ Restaurant Website - Delicious Bites
 
+![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5)
+![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.0-purple?logo=bootstrap)
+![Font Awesome](https://img.shields.io/badge/Font%20Awesome-6.7.2-blue?logo=fontawesome)
+![Fancybox](https://img.shields.io/badge/Fancybox-3.5.7-lightgrey)
+
 A modern, animated, and fully responsive restaurant website built with **HTML**, **CSS**, **JavaScript**, **Bootstrap**, and animation libraries. This project simulates a full-featured food business landing page, ideal for showcasing menus, galleries, and contact forms.
 
 ## 🌐 Live Preview
